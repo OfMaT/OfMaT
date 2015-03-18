@@ -131,7 +131,6 @@ function showSliceFlowSpace($sliceName) {
             
          $Json = json_decode($output1, true);
          $Result = $Json['result'];
-    	 //var_dump($Result);
     
     	 if (count($Result)>0) { //we got any info from switch
       	   echo '<div class="text_pre_table">Slice\'s FlowSpace: </div>';
@@ -145,7 +144,7 @@ function showSliceFlowSpace($sliceName) {
            echo '   <td class="table_col_left" width="8%"><div class="table_text3">Queues</div></td>';              
            echo ' </tr>';
        	   echo ' <tr>';
-       	   //var_dump($Ports);
+
       	   for ($i = 0; $i <  count($Result); $i++) {       	   
              echo '  <td class="table_col_right" width="25%"><div class="table_text4">'.$Result[$i]["id"].' ('.$Result[$i]["name"].')</div></td>';
              echo '  <td class="table_col_right" width="20%"><div class="table_text4">'.$Result[$i]["dpid"].'</div></td>';             

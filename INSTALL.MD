@@ -7,7 +7,7 @@ Floodlight e o servidor Web podem estar em equipamentos diferentes. Caso a rede 
 virtualização, será necessário fornecer à OfMaT as informações relativas ao FlowVisor, 
 hipervisor de rede usado na implementação desta primeira versão da OfMaT.</p>
 
-<p align=justify>Para instalar a OfMaT e deixá-la em funcionamento, deve-se realizar (ou checar)
+<p align=justify>Para instalar a OfMaT e deixá-la em funcionamento, deve-se realizar
 os seguintes procedimentos:
 <br>
 <br>1) Dispor de um espaço reservado em um servidor Web para hospedar a OfMaT;

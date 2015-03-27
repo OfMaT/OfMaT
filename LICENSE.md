@@ -1,4 +1,4 @@
-Copyright 2015 Rui A. R. B. Figueira <ruialexandrefigueira@gmail.com>
+Copyright 2015 Rui A. R. B. Figueira <ruialexandrefigueira@gmail.com><br>
 Copyright 2015 Joberto S. B. Martins <joberto.martins@gmail.com>
 
 Licensed under the Apache License, Version 2.0 (the “License”);

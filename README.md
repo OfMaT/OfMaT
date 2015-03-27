@@ -22,22 +22,6 @@ disponíveis através das opcões Switch View e Slice View. Caso a ferramenta se
 instalada em uma rede que não usa virtualização, o menu Slice View não terá nenhuma
 funcionalidade.</p>
 
-# Pré-Requisitos
-
-<p align=justify>Conforme mencionado anteriormente, a OfMaT funciona em ambiente Web. Assim, faz-se 
-necessário instalá-la em um servidor Web com suporte a PHP. Além disso, como ela 
-foi baseada no Floodlight, é necessário instalar esse controlador na rede, mas o 
-Floodlight e o servidor Web podem estar em equipamentos diferentes. Caso a rede possua
-virtualização, será necessário fornecer à OfMaT as informações relativas ao FlowVisor, 
-hipervisor de rede usado na implementação desta primeira versão da OfMaT.</p>
-
-<p align=justify>A OfMaT contém um arquivo de configuração chamado “ofmat.conf”, onde se definem algumas
-opções da ferramenta. Dentre elas, os endereços de rede do Floodlight e FlowVisor 
-(se houver virtualização), e as credenciais de acesso.</p>
-
-<p align=justify>Para colocar a OfMaT em funcionamento, deve-se inicializar o servidor Web e então rodar 
-o Floodlight. A partir daí, já é possível acessar a OfMaT através de um navegador Web.</p>
-
 # Contato
 <p align=justify>Se tiver alguma dúvida sobre a OfMaT, pode nos contatar através do e-mail 
 ruialexandrefigueira@gmail.com. Esta ferramenta ainda está em desenvolvimento. 

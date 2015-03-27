@@ -13,7 +13,7 @@ os seguintes procedimentos:
 <br>1) Dispor de um espaço reservado em um servidor Web para hospedar a OfMaT;
 <br>2) Obter a OfMaT através do repositório GIT (git clone https://github.com/OfMaT/OfMaT.git);
 <br>3) Fazer upload da OfMaT para o servidor Web;
-<br>4) Abrir o arquivo "ofmat.conf" e configurar os valores adequadamente;
+<br>4) Abrir o arquivo "ofmat.conf" e configurar os parâmetros adequadamente;
 <br>5) Checar se o controlador Floodlight está em execução (e o FlowVisor caso haja virtualização da rede);
 <br>6) Abrir um navegador e acessar a interface gráfica da OfMaT através da URL 
 http://SERVIDOR_WEB/OfMaT/ ou de acordo com a orientação do administrador da rede;

@@ -14,14 +14,14 @@ os seguintes procedimentos:
 <br>2) Obter a OfMaT através do repositório GIT (git clone https://github.com/OfMaT/OfMaT.git);
 <br>3) Fazer upload da OfMaT para o servidor Web;
 <br>4) Abrir o arquivo "ofmat.conf" e configurar os valores adequadamente;
-<br>5) Abrir um navegador e acessar a interface gráfica da OfMaT através da URL 
-http://<SERVIDOR_WEB>/OfMaT/ ou de acordo com a orientação do administrador da rede;
+<br>5) Checar se o controlador Floodlight está em execução (e o FlowVisor caso haja virtualização da rede);
+<br>6) Abrir um navegador e acessar a interface gráfica da OfMaT através da URL 
+http://SERVIDOR_WEB/OfMaT/ ou de acordo com a orientação do administrador da rede;
 
 <p align=justify><b>Observação 1:</b> Caso ainda não tenha o controlador Floodlight instalado, poderá obtê-lo em 
 https://github.com/floodlight/floodlight (atualmente garantimos compatibilidade com a versão 0.91)
 </p>
 
-<p align=justify><b>Observação 2:</b> Caso queira usar a OfMaT para gerenciar redes virtualizadas,
-é preciso ter o FlowVisor instalado; poderá obtê-lo em git://github.com/OPENNETWORKINGLAB/flowvisor.git 
-(compatível com a versão 1.4)
+<p align=justify><b>Observação 2:</b> O FlowVisor pode ser obtido em 
+git://github.com/OPENNETWORKINGLAB/flowvisor.git (OfMaT compatível com a versão 1.4)
 </p>

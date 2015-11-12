@@ -27,7 +27,7 @@ if (!empty($_POST)) { //we had a submit in the form
          <div class="Background_title"></div>
          <div class="Lbl_ofmat_title"></div>
          <div class="Ofmat_simbol"><img src="images/ofmat_simbol.gif" height="100" width="100"></div>
-         <div class="Lbl_version">version 0.1</div>
+         <div class="Lbl_version">version 0.2</div>
       </div>
       <div class="Main_menu">
          <div class="Main_menu_top"></div>
@@ -44,9 +44,23 @@ if (!empty($_POST)) { //we had a submit in the form
     <?php
     
 	//check config file...
-	$OFversion = ''; $fvURL = ''; $fvAuth = ''; $swURL = '';
-	$answer = loadConfigFile($OFversion,$fvURL,$fvAuth,$swURL); 
-	if ($answer == 'OK') { //file and its values are OK	
+	$OFversion = ''; $Virtualization = '';
+	$answer = checkConfigFile($OFversion,$Virtualization);	
+
+	if ($answer == 'OK') { //file and its main values are OK, now let's load other values
+	  //first check if Virtualization is enabled...
+	  if ($Virtualization == 'NO') {
+        $answer = 'Virtualization disabled on "ofmat.conf" file.';	  	
+	  }
+	  else {
+	  	if ($OFversion=='1.0') {
+          $fvURL = ''; $fvAuth = '';
+          $answer = loadNvMMconfigOF10($fvURL,$fvAuth);	  	
+        }
+	  }
+	}
+	
+	if ($answer == 'OK') { //all values in the file was loaded successfully
 	
       if ($key1 == '066x') { //list all slices
    	    $output = '';

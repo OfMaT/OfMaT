@@ -27,7 +27,7 @@ if (!empty($_POST)) { //we had a submit in the form
          <div class="Background_title"></div>
          <div class="Lbl_ofmat_title"></div>
          <div class="Ofmat_simbol"><img src="images/ofmat_simbol.gif" height="100" width="100"></div>
-         <div class="Lbl_version">version 0.1</div>
+         <div class="Lbl_version">version 0.2</div>
       </div>
       <div class="Main_menu">
          <div class="Main_menu_top"></div>
@@ -44,23 +44,28 @@ if (!empty($_POST)) { //we had a submit in the form
     <?php
     
 	//check config file...
-	$OFversion = ''; $fvURL = ''; $fvAuth = ''; $swURL = '';
-	$answer = loadConfigFile($OFversion,$fvURL,$fvAuth,$swURL); 
-	if ($answer == 'OK') { //file and its values are OK	
+	$OFversion = ''; $Virtualization = '';
+	$answer = checkConfigFile($OFversion,$Virtualization);
+
+	if ($answer == 'OK') { //file and its main values are OK, now loading switch values
+      $swURL = '';
+      $answer = loadSwMMconfig($swURL);
+	}
+	
+	if ($answer == 'OK') { //all values in the file was loaded successfully
 	   
       if ($key1 == '066x') { //let´s list switches
-   	    
         $output1 = '';
         $query1 = '/wm/core/controller/switches/json';
         $msg = swQueryCurl($swURL,$query1,$output1);
 
         if ($msg != "OK") {
-           echo '<div class="Message1"><br>ERROR: '.$msg.'</div>';
-	       echo '<div style="height:'.($initialHeight+46).'px;"></div>';             
+          echo '<div class="Message1"><br>ERROR: '.$msg.'</div>';
+	      echo '<div style="height:'.($initialHeight+46).'px;"></div>';             
         }
 	    else {
 	  	  $arrayJson = json_decode($output1, true);
-		  if (isset($arrayJson[0]["dpid"])) { //we have some switch in network
+		  if (isset($arrayJson[0]["switchDPID"])) { //we have some switch in network
 		    echo '<form name="switchView" method="POST" action="switchView.php">';
 		    loadSwitchesList($arrayJson);
 		    echo '<input type="submit" name="Proceed" value="Proceed">';
@@ -77,10 +82,10 @@ if (!empty($_POST)) { //we had a submit in the form
       else { //show info of selected switch
         
         if (showSwitchDescription($_POST["switch"])==0) { //no errors
-		   if (showSwitchFeaturesAndPorts($_POST["switch"])==0) { //no errors
+		   if (showSwitchFeaturesAndPorts($_POST["switch"],$OFversion)==0) { //no errors
 		  	 $endHeight = 1;
 		  	 showSwitchPortStats($_POST["switch"]);
-		  	 showSwitchFlows($_POST["switch"]);
+		  	 showSwitchFlows($_POST["switch"],$OFversion);
 		   }
 		   else
 		     $endHeight = 95;

@@ -12,7 +12,7 @@
          <div class="Background_title"></div>
          <div class="Lbl_ofmat_title"></div>
          <div class="Ofmat_simbol"><img src="images/ofmat_simbol.gif" height="100" width="100"></div>
-         <div class="Lbl_version">version 0.1</div>
+         <div class="Lbl_version">version 0.2</div>
       </div>
       <div class="Main_menu">
          <div class="Main_menu_top"></div>
@@ -27,21 +27,25 @@
     <div class="Panel_middle">
 
       <div class="title1">Welcome to OfMaT!</div>
-      <div class="text1">The OpenFlow Management Tool (OfMaT) is a web based tool to helping in 
-      monitoring and management of networks composed by OpenFlow devices. Ofmat acts in two ways: 
-      based in "Switch View", where it connects to all the swiches in the network and retrieve from 
-      them informations and statistics; and based in "Slice View", where it connects to the 
+
+	  <div class="text1">The OpenFlow Management Tool (OfMaT) is a web based tool to helping in
+      monitoring and management of networks composed by OpenFlow devices. Ofmat was developed to
+      support versions 1.0 and 1.3 of OpenFlow protocol. It has the "Switch View", where it connects
+      to all the swiches in the network and retrieve from them informations and statistics; and it has
+      "Slice View" (supporting only OpenFlow 1.0), where it connects to the "Network Virtualization",
+      implemented in this release using
       <a target="_blank" class="internal1" href="https://github.com/OPENNETWORKINGLAB/flowvisor/wiki">FlowVisor</a>
-      (a special purpose network controller) and gets information about existent virtualized 
+      (a special purpose network controller), and gets information about existent virtualized
       networks (slicing).
-         
+
       </div>
       <div class="title1">Before you Start...</div>
-      <div class="text1">By default, Web Servers listen on port 80, but it is possible it is 
-      configured in another, so check it. If your network have a firewall, check that it is 
-      allowing traffic related to this web server.
-	  Finally, open the configuration file ("ofmat.conf") and make sure you had set correctly its 
-	  parameters to have available all features from this tool.
+      <div class="text1">If your network have a firewall,
+      make the necessary configurations to allow acesses to this web server.
+	  Also open the configuration file ("ofmat.conf") and make sure you had set
+      correctly its parameters to have available all features from this tool.
+      The "Documentation" menu has detailed information about all configurations
+      and resources from OfMaT, so we indicate you read it.
       <br><br><br> 
       </div>      
       <div class="Message1">Enjoy it!</div>

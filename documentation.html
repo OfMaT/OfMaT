@@ -26,12 +26,34 @@
     </div> 
     <div class="Panel_middle">
 
-      <div class="title1">DOCUMENTATION</div>
+      <div class="title1">1. Dependences</div>
       <div class="text1">
-      	It will be released soon.
+      	This tool was developed based on two softwares, so it has some dependences. The first software 
+      	is the Floodlight controller, which acts in the communication with switches and retrieves  
+      	informations and statistics from them. So, OfMaT needs the Floodlight controller installed and 
+      	running at network. More instructions about its instalation are available at developer page
+      	(<a target="_blank" class="internal1" href="https://floodlight.atlassian.net/wiki/display/floodlightcontroller">Floodlight Web Site</a>).
+      </div>	
+      <div class="text1">
+      	The other software used in OfMaT was FlowVisor, a network hypervisor that slices the network resources
+      	allowing multiple virtual networks running over the same physical infrastructure. OfMaT only needs 
+      	this software if the network is sliced and its administrator wants to see information and statistics
+      	about each slice. More instructions about its instalation are available at developer page
+      	(<a target="_blank" class="internal1" href="https://github.com/OPENNETWORKINGLAB/flowvisor/wiki">
+      	FlowVisor Web Site</a>).
+      	
       </div>
+	
+      <div class="title1">2. OfMaT Configuration</div>
+      <div class="text1">
+      	Ofmat has a configuration file where are some parameters required for its operation. The OfMaT modules 
+      	uses the values from this file to get the device management information. Its content has the format 
+      	shown in the figure below.
+      </div>	
+      <div align="center"><img src="images/OfMaTconfigFile.jpg" height="170" width="333"></div>
+
+
       
-      <div style="height:336px;"></div>
     </div>
     <div class="Panel_base">
       <div class="Green_bar">

@@ -271,6 +271,17 @@ a.actual_menu:active {
 	position: relative; 
 	overflow: hidden; 	
 }
+.title2 {
+	color: #131CA4; 
+	font-family: Verdana; 
+	font-size: 13px; 
+	font-weight: bold; 
+	text-align: left;	
+    padding-top: 8pt;
+    padding-left: 10pt;
+	position: relative; 
+	overflow: hidden; 	
+}
 .text1 {
 	color: #4078FF; 
 	font-family: Verdana; 

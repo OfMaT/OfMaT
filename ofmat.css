@@ -292,6 +292,16 @@ a.actual_menu:active {
 	line-height: 13pt;
 	padding: 10pt;
 }
+.list_item {
+	color: #4078FF; 
+	font-family: Verdana; 
+	font-size: 13px; 
+	font-weight: normal;		
+	text-indent: 0pt; 
+	text-align: justify; 	
+	line-height: 13pt;
+	padding: 10pt;
+}
 .Message1 {
 	color: #131CA4; 
 	font-family: Verdana; 

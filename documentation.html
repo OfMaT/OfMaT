@@ -33,17 +33,15 @@
       	informations and statistics from them. So, OfMaT needs the Floodlight controller installed and 
       	running at network. More instructions about its instalation are available at developer page
       	(<a target="_blank" class="internal1" href="https://floodlight.atlassian.net/wiki/display/floodlightcontroller">Floodlight Web Site</a>).
-      </div>	
-      <div class="text1">
+		<p>
       	The other software used in OfMaT was FlowVisor, a network hypervisor that slices the network resources
       	allowing multiple virtual networks running over the same physical infrastructure. OfMaT only needs 
       	this software if the network is sliced and its administrator wants to see information and statistics
       	about each slice. More instructions about its instalation are available at developer page
-      	(<a target="_blank" class="internal1" href="https://github.com/OPENNETWORKINGLAB/flowvisor/wiki">
-      	FlowVisor Web Site</a>).
-      	
+      	(<a target="_blank" class="internal1" href="https://github.com/OPENNETWORKINGLAB/flowvisor/wiki">FlowVisor 
+      	Web Site</a>).
+      	</p>
       </div>
-	
       <div class="title1">2. OfMaT Configuration</div>
       <div class="text1">
       	Ofmat has a configuration file ("ofmat.conf") where are some parameters required for its operation.
@@ -57,7 +55,7 @@
 	    appear on the last line. In the other lines of the file, there may be several tags:
 
 	  <span class="list_item">
-	    <ol type="a">
+	    <ul type="square">
 	      <li>
 	        <b>&lt;OFversion&gt;</b> (mandatory): specify the version of the OpenFlow protocol that is in use. 
 	        Possible values are "1.0" or "1.3";
@@ -80,7 +78,7 @@
 	      	switches (Floodlight). Must be specified using the "&lt;url&gt;" tag, which will provide 
 	      	the URL of this controller.
 	      </li>
-	    </ol>
+	    </ul>
 	  </span>
 
 	    &nbsp;There is still a value restriction involving the parameters &lt;OFversion&gt; and 
@@ -90,6 +88,73 @@
 	    the validation of this configuration file.
 	  </div>	  
 
+      <div class="title1">3. <i>Switch View</i> Option</div>
+      <div class="text1">
+      	This option allows to get statistics and general information about switches in the network. 
+      	When chosen, a select box appears containing all the active network switches. After selecting 
+      	one of them, the information is shown arranged in 5 tables:
+
+	  <span class="list_item">
+	    <ul type="square">
+	      <li>
+	      	<b><i>Switch's Description:</i></b> it contains basic information about the switch, such as its 
+	      	hardware and software, and the version of the OpenFlow protocol in use;
+	      </li>
+	      <li>
+	      	<b><i>Switch's Features:</i></b> it provides information about some capabilities of 
+	      	the switch, such as number of tables, buffers, supported actions and the role it 
+	      	plays in the context of multiple controllers;
+	      </li>
+	      <li>
+	      	<b><i>Switch's Ports:</i></b> it shows details of all ports on the switch, as its 
+	      	hardware address and state;
+	      </li>
+	      <li>
+	      	<b><i>Switch's Port Stats:</i></b> it provides statistics for each switch port: number 
+	      	of collisions, transmitted and received packets, transmitted and received bytes, among others.
+	      </li>
+	      <li>
+	      	<b><i>Switch's Flows:</i></b> it displays entire contents of the switch's flow table, 
+	      	providing information such as flow's validity an its time of existence, OpenFlow version, 
+	      	fields associated to the flow and their Match Values (conditions for a flow to be selected) 
+	      	and the actions to be taken with them.
+	      </li>
+	    </ul>
+	  </span>      	
+      &nbsp;The link "New Query", located after the last table, clears the current report and displays again  
+      the list of existing switches, allowing that a new query be performed.
+	  </div>	  
+	  
+      <div class="title1">4. <i>Slice View</i> Option</div>
+      <div class="text1">
+      	This option is available only to networks using virtualization. It provides information and 
+      	statistics about network slices, as well as virtualized OpenFlow switches. This report is formed
+      	by 4 tables:
+	  <span class="list_item">
+	    <ul type="square">
+	      <li>
+	      	<b><i>Slice's Information:</i></b> it shows some basic information about the network slice selected,
+	      	such as its name, packet discard policy, controller URL and administrator's contact;
+	      </li>
+	      <li>
+	      	<b><i>Slice's Switches:</i></b> it provides the list of switches belonging to the network
+	      	slice selected, identified by the Data Path Identifier (DPID);
+	      </li>
+	      <li>
+	      	<b><i>Slice's FlowSpace:</i></b> displays this network slice's FlowSpace, indicating for 
+	      	each input the identifier (ID), name, switch's DPID, priority and match values;
+	      </li>
+	      <li>
+	      	<b><i>Slice's Stats:</i></b> provides network slice's statistics, accounting the different 
+	      	OpenFlow messages types on the network, which are grouped into: transmitted, received 
+	      	and discarded.
+	      </li>
+	    </ul>
+	  </span>      	
+      &nbsp;The link "New Query", located after the last table, clears the current report and displays again  
+      the list of existing slices, allowing that a new query be performed.
+	  </div>	  
+	    
 	<br>      
     </div>
     <div class="Panel_base">
